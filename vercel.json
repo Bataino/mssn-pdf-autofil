@@ -12,8 +12,12 @@
             "dest": "/public/$1"
         },
         {
-            "src": "/build/(.*)",
-            "dest": "/public/build/$1"
+            "src": "/files/(.*)",
+            "dest": "/files/$1"
+        },
+        {
+            "src": "/vendor/(.*)",
+            "dest": "/vendor/$1"
         },
         {
             "src": "/(.*)", 
