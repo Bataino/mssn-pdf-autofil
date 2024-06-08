@@ -73,7 +73,7 @@ if ($_POST) {
     }
 
     // Output the new PDF
-    ob_clean();
+    // ob_clean();
     $pdf->Output();
     ob_end_flush();
 
