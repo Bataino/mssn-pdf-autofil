@@ -68,7 +68,7 @@ if ($_POST) {
     }
 
     // Output the new PDF
-    // ob_clean();
+    ob_clean();
     $pdf->Output("D","".$_POST["name"].".pdf");
 
 }
