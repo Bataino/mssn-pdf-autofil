@@ -1,12 +1,16 @@
-<?php 
-    function output($pd)
-    {
-        // Output the new PDF
-        ob_end_clean(); //    the buffer and never prints or returns anything.
-        ob_start();
-        $pd->Output("D", $_POST["name"] . ".pdf");
-        ob_end_flush();
-    }
+<?php
+while (ob_get_level())
+    ob_end_clean();
+header("Content-Encoding: None", true);
+
+function output($pd)
+{
+    // Output the new PDF
+    ob_end_clean(); //    the buffer and never prints or returns anything.
+    ob_start();
+    $pd->Output("D", $_POST["name"] . ".pdf");
+    ob_end_flush();
+}
 ?>
 <html>
 
