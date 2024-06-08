@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4b7d4571d389c04e865ad4e16a1ea54",
+    "content-hash": "ccfada2168eedc1f1ca9af724a478ce7",
     "packages": [
         {
             "name": "setasign/fpdf",
@@ -131,7 +131,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^8.1"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
