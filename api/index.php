@@ -36,8 +36,9 @@ if ($_POST) {
     // $data = get_object_vars($data);
     $fileSpec = json_decode($fileSpec, true);
     // print_r($data);
+    $pageCount = $pdf->setSourceFile(__DIR__ .'/files/' . $fileSpec["name"]);
 
-    $pageCount = $pdf->setSourceFile('./files/' . $fileSpec["name"]);
+    // $pageCount = $pdf->setSourceFile('./files/' . $fileSpec["name"]);
     // iterate through all pages
     for ($pageNo = 1; $pageNo <= $pageCount; $pageNo++) {
         // import a page
