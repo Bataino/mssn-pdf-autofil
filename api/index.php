@@ -73,8 +73,8 @@ if ($_POST) {
     }
 
     // Output the new PDF
-    // ob_clean();
-    $pdf->Output($_POST["name"], "-D");
+    ob_clean();
+    $pdf->Output("D","".$_POST["name"].".pdf");
     ob_end_flush();
 
 }
