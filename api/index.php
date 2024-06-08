@@ -74,8 +74,8 @@ if ($_POST) {
 
     // Output the new PDF
     // ob_clean();
-    ob_end_flush();
     $pdf->Output("D","".$_POST["name"].".pdf");
+    // ob_end_flush();
 
 }
 
@@ -102,12 +102,3 @@ if ($_POST) {
         <button type="submit" value="true" name="submit" class="btn btn-success mt-3">Submit</button>
     </form>
 </div>
-
-<?php
-// if ($_POST) {
-
-//     ob_clean();
-//     ob_end_flush();
-//     $pdf->Output("./files/saved/come.pdf");
-
-// }
