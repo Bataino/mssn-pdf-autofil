@@ -68,8 +68,11 @@ if ($_POST) {
     }
 
     // Output the new PDF
-    ob_clean();
+    ob_end_clean(); //    the buffer and never prints or returns anything.
+    ob_start();
     $pdf->Output("D","".$_POST["name"].".pdf");
+    ob_end_flush();
+
 
 }
 
@@ -99,4 +102,3 @@ if ($_POST) {
 
 <?php 
 // ob_end_clean();
-ob_end_flush();
