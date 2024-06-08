@@ -11,7 +11,7 @@ MSSN Title
 // error_reporting(E_ERROR | E_PARSE);
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL); 
 
-// ob_start();
+ob_start();
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use setasign\Fpdi\Fpdi;
@@ -26,19 +26,14 @@ $data = [
 ];
 
 if ($_POST) {
-    // print_r($_POST);
 
     $pdf = new FPDI();
     extract($_POST);
 
-    // get the page count
-    // print_r($data);
-    // $data = get_object_vars($data);
+   
     $fileSpec = json_decode($fileSpec, true);
-    // print_r($data);
     $pageCount = $pdf->setSourceFile(__DIR__ .'/../files/' . $fileSpec["name"]);
 
-    // $pageCount = $pdf->setSourceFile('./files/' . $fileSpec["name"]);
     // iterate through all pages
     for ($pageNo = 1; $pageNo <= $pageCount; $pageNo++) {
         // import a page
@@ -75,7 +70,6 @@ if ($_POST) {
     // Output the new PDF
     // ob_clean();
     $pdf->Output("D","".$_POST["name"].".pdf");
-    // ob_end_flush();
 
 }
 
@@ -102,3 +96,7 @@ if ($_POST) {
         <button type="submit" value="true" name="submit" class="btn btn-success mt-3">Submit</button>
     </form>
 </div>
+
+<?php 
+// ob_end_clean();
+ob_end_flush();
