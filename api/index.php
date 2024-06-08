@@ -11,7 +11,7 @@ MSSN Title
 // error_reporting(E_ERROR | E_PARSE);
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL); 
 
-ob_start();
+// ob_start();
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use setasign\Fpdi\Fpdi;
@@ -74,7 +74,7 @@ if ($_POST) {
 
     // Output the new PDF
     ob_clean();
-    $pdf->Output();
+    $pdf->Output($_POST["name"], "-D");
     ob_end_flush();
 
 }

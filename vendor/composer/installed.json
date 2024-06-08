@@ -1,14 +1,9 @@
 {
-    "_readme": [
-        "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-        "This file is @generated automatically"
-    ],
-    "content-hash": "d4b7d4571d389c04e865ad4e16a1ea54",
     "packages": [
         {
             "name": "setasign/fpdf",
             "version": "1.8.6",
+            "version_normalized": "1.8.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Setasign/FPDF.git",
@@ -24,7 +19,9 @@
                 "ext-gd": "*",
                 "ext-zlib": "*"
             },
+            "time": "2023-06-26T14:44:25+00:00",
             "type": "library",
+            "installation-source": "dist",
             "autoload": {
                 "classmap": [
                     "fpdf.php"
@@ -50,11 +47,12 @@
             "support": {
                 "source": "https://github.com/Setasign/FPDF/tree/1.8.6"
             },
-            "time": "2023-06-26T14:44:25+00:00"
+            "install-path": "../setasign/fpdf"
         },
         {
             "name": "setasign/fpdi",
             "version": "v2.6.0",
+            "version_normalized": "2.6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Setasign/FPDI.git",
@@ -83,7 +81,9 @@
             "suggest": {
                 "setasign/fpdf": "FPDI will extend this class but as it is also possible to use TCPDF or tFPDF as an alternative. There's no fixed dependency configured."
             },
+            "time": "2023-12-11T16:03:32+00:00",
             "type": "library",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "setasign\\Fpdi\\": "src/"
@@ -122,16 +122,9 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-12-11T16:03:32+00:00"
+            "install-path": "../setasign/fpdi"
         }
     ],
-    "packages-dev": [],
-    "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
-    "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "dev": true,
+    "dev-package-names": []
 }
