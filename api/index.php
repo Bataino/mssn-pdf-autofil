@@ -1,3 +1,13 @@
+<?php 
+    function output($pd)
+    {
+        // Output the new PDF
+        ob_end_clean(); //    the buffer and never prints or returns anything.
+        ob_start();
+        $pd->Output("D", $_POST["name"] . ".pdf");
+        ob_end_flush();
+    }
+?>
 <html>
 
 <head>
@@ -67,15 +77,6 @@
                 $pdf->SetXY($x_g_date, $y_date);
                 $pdf->Write(137, $_POST["g_date"]);
             }
-        }
-
-        function output($pd)
-        {
-            // Output the new PDF
-            ob_end_clean(); //    the buffer and never prints or returns anything.
-            ob_start();
-            $pd->Output("D", "" . $_POST["name"] . ".pdf");
-            ob_end_flush();
         }
 
 
